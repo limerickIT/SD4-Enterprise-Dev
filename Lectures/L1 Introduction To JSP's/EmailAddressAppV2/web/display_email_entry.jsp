@@ -10,7 +10,6 @@
         <%@ page import="business.User, data.UserIO" %>
         
         <%
-        
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
         String emailAddress = request.getParameter("emailAddress");
