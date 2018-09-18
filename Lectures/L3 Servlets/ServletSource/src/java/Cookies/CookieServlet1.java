@@ -19,7 +19,7 @@ public class CookieServlet1 extends HttpServlet {
             
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Using Sessions</title>");  
+            out.println("<title>Using Sessions</title> ");  
             out.println("</head>");
             
             out.println("<body>");
