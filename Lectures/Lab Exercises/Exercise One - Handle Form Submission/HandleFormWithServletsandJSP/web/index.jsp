@@ -6,8 +6,7 @@
 </head>
 
 <body>
-<form id="detailsForm" name="detailsForm" method="post" action="HandleForm">
-  <h2>Please Send Us Your Details.</h2>
+<form id="detailsForm" name="detailsForm" method="post" action="HandleForm">  <h2>Please Send Us Your Details.</h2>
   <table width="730" border="0">
     <tr>
       <td width="266">Name</td>
@@ -15,23 +14,23 @@
     </tr>
     <tr>
       <td height="31">Address</td>
-      <td><input name="address" type="text" id="address" size="50" value="${sessionScope.customer.address}" /></td>
+      <td><input name="address" type="text" id="address" size="50" value="${customer.address}" /></td>
     </tr>
     <tr>
       <td>City</td>
-      <td><input type="text" name="city" id="city" value="${sessionScope.customer.city}" /></td>
+      <td><input type="text" name="city" id="city" value="${customer.city}" /></td>
     </tr>
      <tr>
       <td>Country</td>
-      <td><input type="text" name="country" id="country" value="${sessionScope.customer.country}" /></td>
+      <td><input type="text" name="country" id="country" value="${customer.country}" /></td>
     </tr>
     <tr>
       <td>Phone</td>
-      <td><input type="text" name="phone" id="phone" value="${sessionScope.customer.phone}" /></td>
+      <td><input type="text" name="phone" id="phone" value="${customer.phone}" /></td>
     </tr>
     <tr>
       <td>Email</td>
-      <td><input type="text" name="email" id="email" value="${sessionScope.customer.email}" /></td>
+      <td><input type="text" name="email" id="email" value="${customer.email}" /></td>
     </tr>
     <tr>
       <td>Gender</td>
@@ -57,7 +56,7 @@
     <tr>
       <td>Comments</td>
       <td><label for="comments"></label>
-          <textarea name="comments" id="comments" cols="45" rows="5">${sessionScope.customer.comments} </textarea></td>
+          <textarea name="comments" id="comments" cols="45" rows="5">${customer.comments} </textarea></td>
     </tr>
     <tr>
       <td><input type="submit" name="submit" id="submit" value="Submit" /></td>
