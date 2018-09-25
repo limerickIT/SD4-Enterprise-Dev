@@ -1,5 +1,3 @@
-<%@page import="beans.Customer"%>
-<%@page import="data.CustomerIO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

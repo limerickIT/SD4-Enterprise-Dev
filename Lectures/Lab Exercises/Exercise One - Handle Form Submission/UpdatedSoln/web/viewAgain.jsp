@@ -1,4 +1,3 @@
-<%@page import="beans.Customer"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -8,7 +7,7 @@
     </head>
     <body>
         
-        <b><p>Name:</b>    ${sessionScope.customer.name}</p>
+        <b><p>Name:</b>    ${customer.name}</p>
         <b><p>Address:</b> ${sessionScope.customer.address} </p>
         <b><p>City:</b>    ${sessionScope.customer.city} </p>
         <b><p>Country:</b> ${sessionScope.customer.country} </p>

@@ -1,4 +1,3 @@
-<%@page import="beans.Customer"%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -10,7 +9,7 @@
   <table width="730" border="0">
     <tr>
       <td width="266">Name</td>
-      <td width="454"><input name="name" type="text" id="name" size="50" value="${sessionScope.customer.name}" /></td>
+      <td width="454"><input name="name" type="text" id="name" size="50" value="${customer.name}" /></td>
     </tr>
     <tr>
       <td height="31">Address</td>
