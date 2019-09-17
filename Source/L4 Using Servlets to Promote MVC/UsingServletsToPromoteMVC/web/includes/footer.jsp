@@ -1,4 +1,0 @@
-    </body>
-    
-    (c) LIT
-</html>
