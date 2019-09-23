@@ -1,5 +1,0 @@
-ar@ucd.ie|Alan|Ryan
-tb@ul.ie|Ted|Boyle
-bh@lit.ie|Bastian|Hery
-kb@lf.ie|Kieran|Butler
-mmn@lit.ie|Mark|McNulty
