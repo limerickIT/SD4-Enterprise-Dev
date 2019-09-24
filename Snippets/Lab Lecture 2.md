@@ -197,4 +197,3 @@ INSERT INTO `titles` (`ISBN`, `Title`, `EditionNumber`, `YearPublished`, `Publis
         </dependency>
 ```		
 		
-## Markdown
