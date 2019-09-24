@@ -1,8 +1,12 @@
 #### Snippets for Lab Exercise Two  :point_down:
 
-	1. SQL Script for Books DB.
-	2. Maven Dependency
+	- [SQL Script For Books DB](#sqlscript)
+	- [Maven Dependencys](#maven)
+	- [Markup](#markup)
 	
+	
+## sqlscript
+```sql
 	CREATE USER 'sd3user'@'localhost' IDENTIFIED BY 'pass';GRANT ALL PRIVILEGES ON *.* TO 'sd3user'@'localhost' IDENTIFIED BY 'pass' WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0; 
 -- phpMyAdmin SQL Dump
 -- version 2.11.1
@@ -176,7 +180,10 @@ INSERT INTO `titles` (`ISBN`, `Title`, `EditionNumber`, `YearPublished`, `Publis
 ('0-13-JAVA3-x', 'Java How to Program', 3, 2017, 1, 36),
 ('0-13-JCTC2-x', 'The Complete Java Training Course', 3, 2019, 2, 20);
 
-	
+```
+
+## maven
+```xml
 	
          <dependency>
             <groupId>javax.servlet</groupId>
@@ -188,5 +195,6 @@ INSERT INTO `titles` (`ISBN`, `Title`, `EditionNumber`, `YearPublished`, `Publis
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.15</version>
         </dependency>
+```		
 		
-		
+### Markdown
