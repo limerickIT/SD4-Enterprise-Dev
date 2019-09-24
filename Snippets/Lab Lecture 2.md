@@ -1,8 +1,8 @@
 #### Snippets for Lab Exercise Two  :point_down:
 
-	- [SQL Script For Books DB](#sqlscript)
-	- [Maven Dependencys](#maven)
-	- [Markup](#markup)
+- [SQL Script For Books DB](#sqlscript)
+- [Maven Dependencys](#maven)
+- [Markup](#markup)
 	
 	
 ## sqlscript
@@ -197,4 +197,4 @@ INSERT INTO `titles` (`ISBN`, `Title`, `EditionNumber`, `YearPublished`, `Publis
         </dependency>
 ```		
 		
-### Markdown
+## Markdown
