@@ -202,4 +202,5 @@ INSERT INTO `titles` (`ISBN`, `Title`, `EditionNumber`, `YearPublished`, `Publis
     <version>1.6</version>
 </dependency>
 ```		
+
 		
