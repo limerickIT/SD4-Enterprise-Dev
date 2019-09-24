@@ -1,4 +1,4 @@
-#### Snippets for Lab Exercise Two  :point_down:
+# Snippets for Lab Exercise Two  :point_down:
 
 - [SQL Script For Books DB](#sql-script)
 - [Maven Dependencys](#maven-dependencys)
