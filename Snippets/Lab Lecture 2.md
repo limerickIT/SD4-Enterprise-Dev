@@ -195,5 +195,11 @@ INSERT INTO `titles` (`ISBN`, `Title`, `EditionNumber`, `YearPublished`, `Publis
     <artifactId>mysql-connector-java</artifactId>
     <version>8.0.15</version>
 </dependency>
+<!-- only required if you are using Apache commons dbutils library for DB connection -->
+<dependency>
+    <groupId>commons-dbutils</groupId>
+    <artifactId>commons-dbutils</artifactId>
+    <version>1.6</version>
+</dependency>
 ```		
 		
