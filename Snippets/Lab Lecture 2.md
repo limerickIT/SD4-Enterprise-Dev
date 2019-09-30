@@ -2,6 +2,7 @@
 
 - [SQL Script For Books DB](#sql-script)
 - [Maven Dependencys](#maven-dependencys)
+- [DBUtil](#dbutil)
 
 	
 	
@@ -214,5 +215,16 @@ INSERT INTO `titles` (`ISBN`, `Title`, `EditionNumber`, `YearPublished`, `Publis
 </dependency>
 
 ```		
+```
+## DBUtil
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 
-		
+public class DBUtil {
+     
+    private static final EntityManagerFactory EMF = 
+            Persistence.createEntityManagerFactory("xxxx");
+     
+    public static EntityManagerFactory getEMF() { return EMF; }
+}
+```		
