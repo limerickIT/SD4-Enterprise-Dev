@@ -201,6 +201,18 @@ INSERT INTO `titles` (`ISBN`, `Title`, `EditionNumber`, `YearPublished`, `Publis
     <artifactId>commons-dbutils</artifactId>
     <version>1.6</version>
 </dependency>
+<dependency>
+   <groupId>org.eclipse.persistence</groupId>
+   <artifactId>eclipselink</artifactId>
+   <version>2.5.2</version>
+</dependency>
+<dependency>
+   <groupId>org.eclipse.persistence</groupId>
+   <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
+   <version>2.5.2</version>
+   <scope>provided</scope>
+</dependency>
+
 ```		
 
 		
