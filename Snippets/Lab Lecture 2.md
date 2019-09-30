@@ -184,7 +184,7 @@ INSERT INTO `titles` (`ISBN`, `Title`, `EditionNumber`, `YearPublished`, `Publis
 ```
 
 ## Maven Dependencys
-```xml
+```
 	
 <dependency>
     <groupId>javax.servlet</groupId>
@@ -214,9 +214,10 @@ INSERT INTO `titles` (`ISBN`, `Title`, `EditionNumber`, `YearPublished`, `Publis
    <scope>provided</scope>
 </dependency>
 
-```		
 ```
 ## DBUtil
+```
+
 
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
