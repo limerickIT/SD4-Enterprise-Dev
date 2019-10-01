@@ -140,46 +140,54 @@ INSERT INTO `publishers` (`PublisherID`, `PublisherName`) VALUES
 
 -- --------------------------------------------------------
 
---
--- Table structure for table `titles`
---
-
 CREATE TABLE `titles` (
+  `TitleNumber` int(3) NOT NULL,
   `ISBN` text NOT NULL,
   `Title` text NOT NULL,
-  `EditionNumber` int(11) NOT NULL,
-  `YearPublished` int(11) NOT NULL,
-  `PublisherID` int(11) NOT NULL,
-  `Price` decimal(10,0) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `EditionNumber` int(2) NOT NULL,
+  `YearPublished` int(4) NOT NULL,
+  `PublisherID` int(2) NOT NULL,
+  `Price` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `titles`
 --
 
-INSERT INTO `titles` (`ISBN`, `Title`, `EditionNumber`, `YearPublished`, `PublisherID`, `Price`) VALUES
-('0-13-010671-2', 'Java How to Program 2/e and Getting Started with Visual J++ 1.1 Tutorial', 2, 2019, 1, 29),
-('0-13-020522-2', 'Visual Basic 6 How to Program Instructor''s Manual with Solution Disk', 1, 2018, 1, 366.99),
-('0-13-082714-2', 'C++ How to Program 2/e and Getting Started with Visual C++ 5.0 Tutorial', 2, 2018, 1, 17),
-('0-13-082925-0', 'The Complete C++ Training Course', 2, 2014, 2, 13),
-('0-13-082927-7', 'The Complete Java Training Course', 2, 2010, 2, 30),
-('0-13-082928-5', 'The Complete Visual Basic 6 Training Course', 1, 2018, 2, 21),
-('0-13-083054-2', 'The Complete C++ Training Course 2/e and Getting Started with Visual C++ 5.0 Tutorial', 2, 2019, 1, 2555.99),
-('0-13-083055-0', 'The Complete Java Training Course 2/e and Getting Started with Visual J++ 1.1 Tutorial', 2, 2019, 1, 20),
-('0-13-118043-6', 'C How to Program', 1, 2018, 1, 43),
-('0-13-226119-7', 'C How to Program', 2, 2016, 1, 17),
-('0-13-271974-6', 'Java Multimedia Cyber Classroom', 1, 2017, 2, 25),
-('0-13-456955-5', 'Visual Basic 6 How to Program', 1, 2004, 1, 12),
-('0-13-528910-6', 'C++ How to Program', 2, 2007, 1, 15),
-('0-13-565912-4', 'C++ How to Program Instructor''s Manual with Solutions Disk', 2, 2015, 1, 40000.99),
-('0-13-899394-7', 'Java How to Program', 2, 2017, 1, 49),
-('0-13-904947-9', 'Java How to Program Instructor''s Manual with Solution Disk', 2, 2017, 1, 22),
-('0-13-GSVCPP-x', 'Getting Started with Visual C++ 6 with an Introduction to MFC', 1, 2019, 1, 20),
-('0-13-IWCTC-x', 'The Internet and World Wide Web How to Program Complete Training Course', 1, 2017, 2, 9),
-('0-13-IWWWIM-x', 'Internet and World Wide Web How to Program Instructor''s Manual with Solutions Disk', 1, 2019, 1, 9),
-('0-13-IWWW-x', 'Internet and World Wide Web How to Program', 1, 2017, 1, 20),
-('0-13-JAVA3-x', 'Java How to Program', 3, 2017, 1, 36),
-('0-13-JCTC2-x', 'The Complete Java Training Course', 3, 2019, 2, 20);
+INSERT INTO `titles` (`TitleNumber`, `ISBN`, `Title`, `EditionNumber`, `YearPublished`, `PublisherID`, `Price`) VALUES
+(1, '0-13-010671-2', 'Java How to Program 2/e and Getting Started with Visual J++ 1.1 Tutorial', 2, 2019, 1, 29),
+(2, '0-13-020522-2', 'Visual Basic 6 How to Program Instructor\'s Manual with Solution Disk', 1, 2018, 1, 366.99),
+(3, '0-13-082714-2', 'C++ How to Program 2/e and Getting Started with Visual C++ 5.0 Tutorial', 2, 2018, 1, 17),
+(4, '0-13-082925-0', 'The Complete C++ Training Course', 2, 2014, 2, 13),
+(5, '0-13-082927-7', 'The Complete Java Training Course', 2, 2010, 2, 30),
+(6, '0-13-082928-5', 'The Complete Visual Basic 6 Training Course', 1, 2018, 2, 21),
+(7, '0-13-083054-2', 'The Complete C++ Training Course 2/e and Getting Started with Visual C++ 5.0 Tutorial', 2, 2019, 1, 2555.99),
+(8, '0-13-083055-0', 'The Complete Java Training Course 2/e and Getting Started with Visual J++ 1.1 Tutorial', 2, 2019, 1, 20),
+(9, '0-13-118043-6', 'C How to Program', 1, 2018, 1, 43),
+(10, '0-13-226119-7', 'C How to Program', 2, 2016, 1, 17),
+(11, '0-13-271974-6', 'Java Multimedia Cyber Classroom', 1, 2017, 2, 25),
+(12, '0-13-456955-5', 'Visual Basic 6 How to Program', 1, 2004, 1, 12),
+(13, '0-13-528910-6', 'C++ How to Program', 2, 2007, 1, 15),
+(14, '0-13-565912-4', 'C++ How to Program Instructor\'s Manual with Solutions Disk', 2, 2015, 1, 40000.99),
+(15, '0-13-899394-7', 'Java How to Program', 2, 2017, 1, 49),
+(16, '0-13-904947-9', 'Java How to Program Instructor\'s Manual with Solution Disk', 2, 2017, 1, 22),
+(17, '0-13-GSVCPP-x', 'Getting Started with Visual C++ 6 with an Introduction to MFC', 1, 2019, 1, 20),
+(18, '0-13-IWCTC-x', 'The Internet and World Wide Web How to Program Complete Training Course', 1, 2017, 2, 9),
+(19, '0-13-IWWWIM-x', 'Internet and World Wide Web How to Program Instructor\'s Manual with Solutions Disk', 1, 2019, 1, 9),
+(20, '0-13-IWWW-x', 'Internet and World Wide Web How to Program', 1, 2017, 1, 20),
+(21, '0-13-JAVA3-x', 'Java How to Program', 3, 2017, 1, 36),
+(22, '0-13-JCTC2-x', 'The Complete Java Training Course', 3, 2019, 2, 20);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `titles`
+--
+ALTER TABLE `titles`
+  ADD PRIMARY KEY (`TitleNumber`);
+
 
 ```
 
