@@ -166,7 +166,7 @@
 </filter-mapping>
 
 ```
-## Shiro.ini V1
+## shiro.ini *V1*
 ```
 ; this is an INI file
 [main]
@@ -265,7 +265,7 @@ INSERT INTO `userroles` (`userID`, `role`) VALUES
 
 ```
 
-## Shiro.ini V2
+## shiro.ini *V2*
 ```
 [main]
 jdbcRealm= org.apache.shiro.realm.jdbc.JdbcRealm
