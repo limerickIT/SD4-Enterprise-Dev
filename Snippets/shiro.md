@@ -1,11 +1,11 @@
 # Snippets for Shiro Exercise  :japanese_castle:
 
 - [Maven Dependencys](#maven-dependencys)
-- [web.xml](#webxml)
-- [Shiro.ini with users, passwords and roles stored *in the file*](#shiroini-v1)
 - [index.jsp](#indexjsp)
 - [login.jsp](#loginjsp)
 - [admin/index.jsp](#adminindexjsp)
+- [web.xml](#webxml)
+- [Shiro.ini with users, passwords and roles stored *in the file*](#shiroini-v1)
 - [SQL Script For Shiro DB](#sql-script)
 - [Shiro.ini with users, passwords and roles stored *in the DB*](#shiroini-v2)
 
@@ -69,56 +69,7 @@
     </dependency>
 
 ```
-## web.xml
-```
-<listener>
-    <listener-class>org.apache.shiro.web.env.EnvironmentLoaderListener</listener-class>
-</listener>
 
-<filter>
-    <filter-name>ShiroFilter</filter-name>
-    <filter-class>org.apache.shiro.web.servlet.ShiroFilter</filter-class>
-</filter>
-
-<filter-mapping>
-    <filter-name>ShiroFilter</filter-name>
-    <url-pattern>/*</url-pattern>
-    <dispatcher>REQUEST</dispatcher> 
-    <dispatcher>FORWARD</dispatcher> 
-    <dispatcher>INCLUDE</dispatcher> 
-    <dispatcher>ERROR</dispatcher>
-</filter-mapping>
-
-```
-## Shiro.ini V1
-```
-[main]
-authc.loginUrl = /login.jsp
-authc.usernameParam = username
-authc.passwordParam = password
-authc.rememberMeParam = rememberMe
-authc.successUrl = /admin/index.jsp
-logout.redirectUrl = /login.jsp
-
-
-[users]
-root = rootpass, admin
-alan = alanpass, lecturer
-tomc = tompass, statistician
-
-;This section allows you to use a name/value pair syntax to tell shiro how to filter request 
-;for any given URL path. All paths in [urls] are relative to the web application
-[urls]
-;whenever Shiro sees a request to the /login.jsp url, enable the Shiro authc filter during the request
-/login.jsp = authc 
-/admin/** = authc 
-/logout = logout
-
-[roles]
-admin = *
-lecturer = academic_content
-statistician = stats_stuff
-```		
 ## index.jsp
 ```
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -194,6 +145,56 @@ statistician = stats_stuff
     </body>
 </html>
 ```
+## web.xml
+```
+<listener>
+    <listener-class>org.apache.shiro.web.env.EnvironmentLoaderListener</listener-class>
+</listener>
+
+<filter>
+    <filter-name>ShiroFilter</filter-name>
+    <filter-class>org.apache.shiro.web.servlet.ShiroFilter</filter-class>
+</filter>
+
+<filter-mapping>
+    <filter-name>ShiroFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+    <dispatcher>REQUEST</dispatcher> 
+    <dispatcher>FORWARD</dispatcher> 
+    <dispatcher>INCLUDE</dispatcher> 
+    <dispatcher>ERROR</dispatcher>
+</filter-mapping>
+
+```
+## Shiro.ini V1
+```
+[main]
+authc.loginUrl = /login.jsp
+authc.usernameParam = username
+authc.passwordParam = password
+authc.rememberMeParam = rememberMe
+authc.successUrl = /admin/index.jsp
+logout.redirectUrl = /login.jsp
+
+
+[users]
+root = rootpass, admin
+alan = alanpass, lecturer
+tomc = tompass, statistician
+
+;This section allows you to use a name/value pair syntax to tell shiro how to filter request 
+;for any given URL path. All paths in [urls] are relative to the web application
+[urls]
+;whenever Shiro sees a request to the /login.jsp url, enable the Shiro authc filter during the request
+/login.jsp = authc 
+/admin/** = authc 
+/logout = logout
+
+[roles]
+admin = *
+lecturer = academic_content
+statistician = stats_stuff
+```		
 ## SQL Script
 ```sql
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
