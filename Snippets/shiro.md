@@ -3,7 +3,7 @@
 - [Maven Dependencys](#maven-dependencys)
 - [index.jsp](#indexjsp)
 - [login.jsp](#loginjsp)
-- [admin/index.jsp](#adminindexjsp)
+- [secret/index.jsp](#secretindexjsp)
 - [web.xml](#webxml)
 - [Shiro.ini with users, passwords and roles stored *in the file*](#shiroini-v1)
 - [SQL Script For Shiro DB](#sql-script)
@@ -127,19 +127,19 @@
 </html>
 
 ```
-## admin/index.jsp
+## secret/index.jsp
 ```
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Welcome to the Admin Home Page</title>
+        <title>Home Page</title>
     </head>
     <body>
-        <h3>This is the admin home page</h3>
+        <h3>This is secret content</h3>
         <br>
-        <h3>It should be visible to authenticated admins only</h3> 
+        <h3>It should be visible to authenticated users only</h3> 
         <br>
        <a href="/****YOUR APP PATH****/logout">Log Out</a>
     </body>
@@ -168,12 +168,13 @@
 ```
 ## Shiro.ini V1
 ```
+; this is an INI file
 [main]
 authc.loginUrl = /login.jsp
 authc.usernameParam = username
 authc.passwordParam = password
 authc.rememberMeParam = rememberMe
-authc.successUrl = /admin/index.jsp
+authc.successUrl = /secret/index.jsp
 logout.redirectUrl = /login.jsp
 
 
@@ -187,7 +188,7 @@ tomc = tompass, statistician
 [urls]
 ;whenever Shiro sees a request to the /login.jsp url, enable the Shiro authc filter during the request
 /login.jsp = authc 
-/admin/** = authc 
+/secret/** = authc 
 /logout = logout
 
 [roles]
@@ -197,6 +198,9 @@ statistician = stats_stuff
 ```		
 ## SQL Script
 ```sql
+create DATABASE shiro;
+use shiro;
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
@@ -258,6 +262,7 @@ INSERT INTO `userroles` (`userID`, `role`) VALUES
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
+
 ```
 
 ## Shiro.ini V2
@@ -272,7 +277,7 @@ ds = com.mysql.jdbc.jdbc2.optional.MysqlDataSource
 ds.serverName = localhost
 ds.user = root
 ;ds.password = shiro
-ds.databaseName = shiro_test
+ds.databaseName = shiro
 jdbcRealm.dataSource= $ds
 
 passwordMatcher = org.apache.shiro.authc.credential.Sha256CredentialsMatcher
@@ -285,11 +290,11 @@ authc.loginUrl = /login.jsp
 authc.usernameParam = username
 authc.passwordParam = password
 authc.rememberMeParam = rememberMe
-authc.successUrl = /admin/index.jsp
+authc.successUrl = /secret/index.jsp
 logout.redirectUrl = /login.jsp
 
 [urls]
 /login.jsp = authc 
-/admin/** = authc 
+/secret/** = authc 
 /logout = logout
 ```
