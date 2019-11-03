@@ -5,7 +5,7 @@
 - [displayAllAuthors.jsp)](#displayallauthors)
 - [Javascript](#javascript)
 - [Queries](#queries)
-- [Crude Code For Filter] (#filter)
+- [Crude Code For Filter](#filter)
 	
 	
 ## Add User Form
