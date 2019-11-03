@@ -3,7 +3,8 @@
 - [Add User Form](#add-user-form)
 - [AddAuthor Servlet (doPost() method only)](#add-author-servlet)
 - [DisplayAllAuthors Servlet (processRequest() method only)](#displayallauthors-servlet)
-
+- [Javascript](#javascript)
+- [Queries](#queries)
 	
 	
 ## Add User Form
@@ -166,4 +167,16 @@ protected void processRequest(HttpServletRequest request, HttpServletResponse re
         }
     }
 
-```		
+```
+## Javascript
+```
+<script>alert("danger");</script>
+```
+
+## Queries
+```
+select password from mysql.user where user='alanr' limit 0,1
+
+INSERT INTO authors(AuthorID, FirstName, LastName, YearBorn)VALUES ('123456','Bob,',(select password from mysql.user where user='alanr' limit 0,1),'1990')
+
+```
