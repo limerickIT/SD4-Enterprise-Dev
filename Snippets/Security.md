@@ -1,4 +1,4 @@
-# Snippets for Security Lecture  :point_down:
+# Snippets for Security Lecture  :closed_lock_with_key:
 
 - [Add User Form](#add-user-form)
 - [AddAuthor Servlet (doPost() method only)](#add-author-servlet)
@@ -165,7 +165,7 @@
                        <tr>
                         <td> <%=rs.getObject("AuthorID")%> </td>
                         <td> <%=rs.getObject("FirstName")%> </td>
-                        <td> <%=rs.getObject("FirstName")%> </td>
+                        <td> <%=rs.getObject("LastName")%> </td>
                         <td> <%=rs.getObject("YearBorn")%> </td>
                        </tr>
                     <% } %>
