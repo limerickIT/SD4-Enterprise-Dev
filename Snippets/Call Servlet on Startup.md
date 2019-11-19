@@ -11,7 +11,7 @@ or use **_WebServlet annotation loadOnStartup_** to tell the container to load t
 </servlet> 
 ```
 
-The load-on-startup value should be **_int_**, if it’s a negative value then thebservlet container will load the servlet based on request(s) and 
+The load-on-startup value should be **_int_**, if it’s a negative value then the servlet container will load the servlet based on request(s) and 
 but if it’s 0 or a positive value, the container will load it on application startup.
 
 If there are multiple servlets with load-on-startup value such as 0,1,2,3 then lower integer value servlet will be loaded first. 
