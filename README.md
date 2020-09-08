@@ -5,7 +5,7 @@ This module is designed to equip learners with the foundations required to build
 
 On completion of this module the learner will/should be able to:
 
-:heavy_check_mark: Recognition of the need for suitable design patterns when constructing web applications.
+:heavy_check_mark: Recognise the need for suitable design patterns when constructing web applications.
 
 :heavy_check_mark: Identify and minimise the impact of security vulnerabilities in a web application.
 
